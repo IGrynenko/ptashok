@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Пташок - Український Дитячий Садок</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <!-- Add Open Graph Data -->
+        <!-- Add Favicon -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="./scripts/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="./images/logo-ptashok.jpg" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a onclick="moveTo('about-us')">Про нас</a></li>
+                        <li><a onclick="moveTo('kindergarten')">Садок</a></li>
+                        <li><a onclick="moveTo('child')">Дитина</a></li>
+                        <li><a onclick="moveTo('stream')">STREAM</a></li>
+                        <li><a onclick="moveTo('infrastructure')">Інфраструктура</a></li>
+                        <li><a onclick="moveTo('contacts')">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="call">
+                    <button class="call-btn" onclick="dial()">
+                        <div>зателефонуйте<br>нам</div>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="about-us" id="about-us">
+                <div><strong>«Пташок»</strong> &mdash; це український, дитячий садок ДЛЯ дітей і ПРО дітей на основі STREAM-педагогіки, в якому чільне місце посідають інтереси дитини.</div>
+                <div>Ми шануємо українські традиції та культуру.</div>
+                <div>Ми власним прикладом показуємо необхідність відповідального, здорового, доброзичливого та свідомого ставлення до себе, до оточуючих, до природи та до своєї країни.</div>
+                <div>Для нас дитина &mdash; це обдарована особистість, яка може досягти високого рівня розвитку, здатна самостійно приймати рішення, може обгрунтувати свої дії, усвідомолює власну відповідальність і має право на помилку.</div>
+                <div>Наша мета &mdash; розвиток гармонійної, впевненої в собі особистості, яка готова до відкриттів, досліджень та пізнання.</div>
+            </section>
+            <div class="line"></div>
+            <section class="kindergarten" id="kindergarten">
+                <div class="image-block"></div>
+                <div class="text-block">
+                    <ul>
+                        <li><span class="bullet">Україномовне середовище.</span></li>
+                        <li><span class="bullet">Вивчення української культури у контексті світової.</span></li>
+                        <li><span class="bullet">Знайомство з українськими традиціями та святкування українських свят.</span></li>
+                        <li><span class="bullet">Сприйняття українського, як самодостатнього і рівноправного.</span></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="line"></div>
+            <section class="child" id="child">
+                <div class="text-block">
+                    <ul>
+                        <li><span class="bullet">Дитина – це не глечик, який треба заповнити, а іскра, якій треба допомогти стати полум’ям.</span></li>
+                        <li><span class="bullet">Дитина – це повноправний член суспільства, який має свободу вибору, усвідомлює свою відповідальність, має право на помилку та вміє говорити «ні».</span></li>
+                        <li><span class="bullet">Чільне місце посідають інтереси дитини.</span></li>
+                    </ul>
+                </div>
+                <div class="image-block"></div>
+            </section>
+            <div class="line"></div>
+            <section class="stream" id="stream">
+                <div class="image-block">
+                    <img src="./images/STREAM-Logo.png" alt="" class="image-stream">
+                </div>
+                <div class="text-block">
+                    <ul>
+                        <li><span class="bullet">Інтеґроване навчання (навчання за темами, а не за предметами, що сприяє формування цілісної уяви про світ).</span></li>
+                        <li><span class="bullet">Використання знань у повсякденному житті.</span></li>
+                        <li><span class="bullet">Розвиток критичного мислення та вміння вирішувати проблеми.</span></li>
+                        <li><span class="bullet">Комунікація та командна робота.</span></li>
+                        <li><span class="bullet">Проєктна діяльність.</span></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="line"></div>
+            <section class="infrastructure" id="infrastructure">
+                <div class="text-block">
+                    <ul>
+                        <li><span class="bullet">Окрема затишна двоповерхова будівля.</span></li>
+                        <li><span class="bullet">Садок знаходиться в лісі на закритій території ЖК.</span></li>
+                        <li><span class="bullet">Тривалі прогулянки на свіжому повітрі.</span></li>
+                        <li><span class="bullet">Власний дитячий майданчик.</span></li>
+                        <li><span class="bullet">Відеоспостереження.</span></li>
+                        <li><span class="bullet">Протипожежна сигналізація.</span></li>
+                        <li><span class="bullet">Сертифіковані сучасні меблі, обладнання та іграшки.</span></li>
+                        <li><span class="bullet">Всі працівники садочка проходять навчання з надання першої медичної допомоги.</span></li>
+                        <li><span class="bullet">Страхування дітей.</span></li>
+                        <li><span class="bullet">М’яка (індивідуальна) адаптація.</span></li>
+                    </ul>
+                </div>
+                <div class="image-block"></div>
+            </section>
+            <footer id="contacts">
+                <div class="contacts">
+                    <div class="info">
+                        <div>Наші контакти:</div>
+                        <address>
+                            <div>
+                                <a href="tel:+380965235134">(096)-523-51-34</a>
+                            </div>
+                            <div>
+                                <a href="mailto:ptashok.sadok@gmail.com">ptashok.sadok@gmail.com</a>
+                            </div>
+                            <div>Київська обл., вул. Ідейна, 9</div>
+                        </address>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1773.7629475304414!2d30.713825575094013!3d50.36718364541001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c53a6655b982026!2s%22Ptashok%22%20-%20Ukrayins%CA%B9kyy%20Dytyachyy%20Sadok%20Dlya%20Ditey%20I%20Pro%20Ditey!5e0!3m2!1sen!2sua!4v1626119638362!5m2!1sen!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="false" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright © 2021
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

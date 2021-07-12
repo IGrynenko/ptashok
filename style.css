@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Veles', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+	padding: 0;
+}
+
+ul {
+    list-style-type: "\1F423";
+}
+
+section ul li {
+    font-size: 1.35em;
+}
+
+li span.bullet {
+    display: inline-table;
+    vertical-align: top;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+div, .text-block li, li span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button div, .info div {
+    font-family: 'Veles', Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+strong, b {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+nav a {
+    font-weight: bold;
+    color: #306B61;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 11px 35px 5px rgba(0,0,0,0.1);
+}
+
+body {
+    background: url(./images/pattern1.png);
+    background-position: center;
+    background-size: 100%;
+}
+
+/* navigation */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+}
+
+nav .logo {
+    width: 170px;
+}
+
+nav .logo img {
+    height: 100px;
+    padding-left: 20px;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+nav .menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-right: 40px;
+    font-size: 1.2em;
+}
+
+nav .menu ul li {
+    margin: 0px 15px;
+    height: 25px;
+}
+
+.menu li:hover {
+    border-bottom: 3px solid #F5A797;
+}
+
+.menu ul li:hover, button:hover, nav img:hover {
+    cursor: pointer;
+}
+
+.call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.call .call-btn {
+    height: 60px;
+    min-width: 150px;
+    background-color: #F5A797;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.call .call-btn:hover {
+    background-color: #F5A797;
+    opacity: 0.9;
+}
+
+.call .call-btn div {
+    font-weight: 400;
+    font-weight: 1.1em; 
+}
+
+/* body::after {
+    content: "";
+    background: url(./images/pattern1.png);
+    background-position: center;
+    background-size: 100%;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 100%!important;
+  } */
+
+/* body */
+main {
+    padding: 150px 120px 0px 120px;
+}
+
+.line {
+    height: 1.1px;
+    background-color: rgba(238, 238, 238, 0.856);
+    margin: 50px 0px;
+}
+
+.about-us {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-block {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 70px;
+}
+
+.kindergarten {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+.kindergarten .text-block {
+    width: 50%;
+}
+
+.kindergarten .text-block li {
+    padding: 10px 0px;
+}
+
+.kindergarten .image-block {
+    background: url('./images/kindergarten.jpg');
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    border-radius: 15px;
+    -webkit-box-shadow: 12px 12px 0px 1px rgba(67,151,140,0.85); 
+    box-shadow: 12px 12px 0px 1px rgba(67,151,140,0.85);
+}
+
+.child {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+.child .text-block {
+    width: 50%;
+}
+
+.child .image-block {
+    background: url('./images/childcare-hero.jpg');
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    border-radius: 15px;
+    -webkit-box-shadow: -15px -15px 0px 1px rgba(206,211,103,0.85); 
+    box-shadow: -15px -15px 0px 1px rgba(206,211,103,0.85);
+}
+
+.child .text-block li {
+    padding: 20px 0px;
+}
+
+.stream {
+    height: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stream .image-block {
+    height: 370px;
+}
+
+.image-block .image-stream {
+    height: 100%;
+}
+
+.stream .text-block {
+    width: 70%;
+}
+
+.stream .text-block li {
+    padding: 15px 0px;
+}
+
+.infrastructure {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.infrastructure .text-block {
+    width: 50%;
+}
+
+.infrastructure .image-block {
+    background: url('./images/safety.jpg');
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    border-radius: 15px;
+    -webkit-box-shadow: -21px -14px 0px 1px rgba(237,161,85,0.85); 
+    box-shadow: -21px -14px 0px 1px rgba(237,161,85,0.85);;
+}
+
+.infrastructure .text-block li {
+    padding: 7px 0px;
+}
+
+/* footer */
+footer {
+    margin-top: 60px;
+}
+
+.contacts {
+    height: 300px;
+    background-color: #F5A797;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contacts .info {
+    width: 40%;
+    padding: 20px 0px 20px 30px;
+}
+
+.contacts .map {
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.vertical-line {
+    width: 1.2px;
+    background-color: rgba(238, 238, 238, 0.856);
+    margin: 20px 0px;
+}
+
+.info div, .info a {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+address div {
+    padding-top: 20px;
+}
+
+.copyright {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Veles';
+    src: url('./fonts/Veles-Bold.eot');
+    src: local('./fonts/Veles-Bold'),
+        url('./fonts/Veles-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Veles-Bold.woff2') format('woff2'),
+        url('./fonts/Veles-Bold.woff') format('woff'),
+        url('./fonts/Veles-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Veles';
+    src: url('./fonts/Veles-Regular.eot');
+    src: local('./fonts/Veles-Regular'),
+        url('./fonts/Veles-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Veles-Regular.woff2') format('woff2'),
+        url('./fonts/Veles-Regular.woff') format('woff'),
+        url('./fonts/Veles-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
