@@ -14,3 +14,10 @@ function dial() {
     element.setAttribute('href', `tel:${phone}`);
     element.click();
 }
+
+function test() {
+    const form = document.getElementById('email-form');
+
+    if (form)
+        form.submit();
+}

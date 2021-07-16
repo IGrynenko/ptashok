@@ -22,7 +22,7 @@ li span.bullet {
     font-size: 1rem;
 }
 
-div, .text-block li, li span {
+div, .text-block li, li span, label, input {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -47,6 +47,7 @@ header {
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0px 11px 35px 5px rgba(0,0,0,0.1);
+    z-index: 2;
 }
 
 body {
@@ -158,115 +159,149 @@ main {
     justify-content: space-between;
 }
 
-.text-block {
+.features {
+    height: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 49%;
+}
+
+.flip-card {
+    width: 49%;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+    cursor: pointer;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
     display: flex;
     align-items: center;
-    padding: 0px 50px 0px 70px;
-}
-
-.kindergarten {
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-}
-
-.kindergarten .text-block {
-    width: 50%;
-}
-
-.kindergarten .text-block li {
-    padding: 10px 0px;
-}
-
-.kindergarten .image-block {
-    background: url('./images/kindergarten.jpg');
-    width: 50%;
-    background-position: center;
-    background-size: cover;
-    background-attachment: local;
-    border-radius: 15px;
-    -webkit-box-shadow: 12px 12px 0px 1px rgba(67,151,140,0.85); 
-    box-shadow: 12px 12px 0px 1px rgba(67,151,140,0.85);
-}
-
-.child {
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-}
-
-.child .text-block {
-    width: 50%;
-}
-
-.child .image-block {
-    background: url('./images/childcare-hero.jpg');
-    width: 50%;
-    background-position: center;
-    background-size: cover;
-    background-attachment: local;
-    border-radius: 15px;
-    -webkit-box-shadow: -15px -15px 0px 1px rgba(206,211,103,0.85); 
-    box-shadow: -15px -15px 0px 1px rgba(206,211,103,0.85);
-}
-
-.child .text-block li {
-    padding: 20px 0px;
-}
-
-.stream {
-    height: 370px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.stream .image-block {
-    height: 370px;
-}
-
-.image-block .image-stream {
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    border-radius: 15px;
 }
 
-.stream .text-block {
-    width: 70%;
+.gray-cover {
+    background-color: rgba(88, 88, 88, 0.7);
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.stream .text-block li {
+.gray-cover .title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.kindergarten-front {
+    background: url('./images/kindergarten.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    /* -webkit-box-shadow: 12px 12px 0px 1px rgba(67,151,140,0.85); 
+    box-shadow: 12px 12px 0px 1px rgba(67,151,140,0.85); */
+}
+
+.kindergarten-back {
+    background-color: rgb(245, 167, 151, 0.5);
+}
+
+.child-front {
+    background: url('./images/childcare-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    /* -webkit-box-shadow: -15px -15px 0px 1px rgba(206,211,103,0.85); 
+    box-shadow: -15px -15px 0px 1px rgba(206,211,103,0.85); */   
+}
+
+.child-back {
+    background-color: rgb(48, 107, 97, 0.5);
+}
+
+.stream-front {
+    background: url('./images/stream.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+}
+
+.stream-back {
+    background-color: rgb(237, 161, 85, 0.5);
+}
+
+.infrastructure-front {
+    background: url('./images/safety.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    /* -webkit-box-shadow: -21px -14px 0px 1px rgba(237,161,85,0.85); 
+    box-shadow: -21px -14px 0px 1px rgba(237,161,85,0.85);; */
+}
+
+.infrastructure-back {
+    background-color: rgb(206, 211, 103, 0.5);
+}
+
+.kindergarten-back ul,
+.child-back ul,
+.stream-back ul,
+.infrastructure-back ul {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.kindergarten-back li,
+.child-back li,
+.stream-back li {
     padding: 15px 0px;
 }
 
-.infrastructure {
-    height: 500px;
-    display: flex;
-    flex-direction: row;
+.infrastructure-back li {
+    padding: 5px 0px;
 }
 
-.infrastructure .text-block {
-    width: 50%;
-}
-
-.infrastructure .image-block {
-    background: url('./images/safety.jpg');
-    width: 50%;
-    background-position: center;
-    background-size: cover;
-    background-attachment: local;
-    border-radius: 15px;
-    -webkit-box-shadow: -21px -14px 0px 1px rgba(237,161,85,0.85); 
-    box-shadow: -21px -14px 0px 1px rgba(237,161,85,0.85);;
-}
-
-.infrastructure .text-block li {
-    padding: 7px 0px;
-}
-
-/* footer */
-footer {
-    margin-top: 60px;
-}
-
+/* contacts */
 .contacts {
     height: 300px;
     background-color: #F5A797;
@@ -302,6 +337,46 @@ address div {
     padding-top: 20px;
 }
 
+/* form */
+.enrolment {
+    width: 100%;
+    height: 300px;
+}
+
+.enrolment input {
+    display: block;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px;
+}
+
+.enrolment label {
+    padding-bottom: 10px;
+}
+
+.enr-message {
+    text-align: center;
+    line-height: 35px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    /* width: 60%; */
+    justify-content: center;
+}
+
+.submit-btn {
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.submit-btn button {
+    width: 80px;
+    height: 40px;
+}
+
+/* footer */
 .copyright {
     height: 50px;
     line-height: 50px;
@@ -331,4 +406,3 @@ address div {
     font-weight: normal;
     font-style: normal;
 }
- 
