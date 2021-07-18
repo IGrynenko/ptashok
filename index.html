@@ -7,12 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <!-- Add Open Graph Data -->
-        <!-- Add Favicon -->
+        <link rel="apple-touch-icon" sizes="152x152" href="./images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./splide.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="./scripts/main.js"></script>
+        <script src="./scripts/splide.min.js"></script>
     </head>
     <body>
         <header>
@@ -42,6 +47,37 @@
                 <div>Ми власним прикладом показуємо необхідність відповідального, здорового, доброзичливого та свідомого ставлення до себе, до оточуючих, до природи та до своєї країни.</div>
                 <div>Для нас дитина &mdash; це обдарована особистість, яка може досягти високого рівня розвитку, здатна самостійно приймати рішення, може обгрунтувати свої дії, усвідомолює власну відповідальність і має право на помилку.</div>
                 <div>Наша мета &mdash; розвиток гармонійної, впевненої в собі особистості, яка готова до відкриттів, досліджень та пізнання.</div>
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="slider-img">
+                                    <img src="./images/k1.jpg" id="slide-image-1" alt="">
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-img">
+                                    <img src="./images/k1.jpg" id="slide-image-2" alt="">
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-img">
+                                    <img src="./images/k1.jpg" id="slide-image-3" alt="">
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-img">
+                                    <img src="./images/k1.jpg" id="slide-image-4" alt="">
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slider-img">
+                                    <img src="./images/k1.jpg" id="slide-image-5" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <div class="line"></div>
             <section class="features" id="features">
@@ -144,9 +180,9 @@
                 </div>
             </section>
             <div class="line"></div>
-            <section class="enrolment">
+            <section class="enrolment" id="enrolment">
                 <div class="enr-message">
-                    Цікаветесь вступом?<br>
+                    Хочете дізнатися більше?<br>
                     Заповніть форму і ми Вам зателефонуємо
                 </div>
                 <div class="form">
@@ -163,7 +199,7 @@
                         </label>
                     </form>
                     <div class="submit-btn">
-                        <button onclick="test()">TEST</button>
+                        <button onclick="submit()" id="submit-btn" disabled>TEST</button>
                     </div>
                 </div> 
             </section>
@@ -171,5 +207,8 @@
                 <div class="copyright">Copyright © 2021</div>
             </footer>
         </main>
+        <div class="modal" id="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+        </div>
     </body>
 </html>

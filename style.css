@@ -127,20 +127,6 @@ nav .menu ul li {
     font-weight: 1.1em; 
 }
 
-/* body::after {
-    content: "";
-    background: url(./images/pattern1.png);
-    background-position: center;
-    background-size: 100%;
-    opacity: 0.6;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    height: 100%!important;
-  } */
-
 /* body */
 main {
     padding: 150px 120px 0px 120px;
@@ -153,7 +139,7 @@ main {
 }
 
 .about-us {
-    height: 300px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -376,6 +362,15 @@ address div {
     height: 40px;
 }
 
+input:focus:required:invalid {
+    border: 2px solid red;
+    /* background-color: pink;  */
+}
+
+/* input:focus:invalid {
+    background-color: pink;
+} */
+
 /* footer */
 .copyright {
     height: 50px;
@@ -405,4 +400,48 @@ address div {
         url('./fonts/Veles-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+/* slider */
+.splide__slide .slider-img {
+	width : 100%;
+	height: auto;
+}
+
+.splide__slide .slider-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.splide__slide .slider-img img:hover {
+    cursor: pointer;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
 }
