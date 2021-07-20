@@ -111,7 +111,10 @@ function zoomPicture(e) {
         modalElement.style.display = 'block';
         tempImage = document.createElement('img');
         tempImage.src = imageElement.src;
-        modalElement.appendChild(tempImage)
+        const modalContentElement = document.getElementById('modal-content');
+
+        if (modalContentElement)
+            modalContentElement.appendChild(tempImage);
     }
 }
 
