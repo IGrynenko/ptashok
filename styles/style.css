@@ -51,7 +51,7 @@ header {
 }
 
 body {
-    background: url(./images/pattern1.png);
+    background: url(../images/pattern1.png);
     background-position: center;
     background-size: 100%;
 }
@@ -134,6 +134,7 @@ nav .menu ul li {
 /* body */
 main {
     padding: 150px 120px 0px 120px;
+    max-width: 1400px;
 }
 
 .line {
@@ -224,7 +225,7 @@ main {
 }
 
 .kindergarten-front {
-    background: url('./images/kindergarten.jpg');
+    background: url('../images/kindergarten.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: local;
@@ -237,7 +238,7 @@ main {
 }
 
 .child-front {
-    background: url('./images/childcare-hero.jpg');
+    background: url('../images/childcare-hero.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: local;
@@ -250,7 +251,7 @@ main {
 }
 
 .stream-front {
-    background: url('./images/stream.jpg');
+    background: url('../images/stream.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: local;
@@ -261,7 +262,7 @@ main {
 }
 
 .infrastructure-front {
-    background: url('./images/safety.jpg');
+    background: url('../images/safety.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: local;
@@ -403,32 +404,36 @@ input:focus:required:invalid {
 }
 
 /* footer */
-.copyright {
+footer {
     height: 50px;
+}
+
+.copyright {
+    height: 100%;
     line-height: 50px;
     text-align: center;
 }
 
 @font-face {
     font-family: 'Veles';
-    src: url('./fonts/Veles-Bold.eot');
+    src: url('../fonts/Veles-Bold.eot');
     src: local('./fonts/Veles-Bold'),
-        url('./fonts/Veles-Bold.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/Veles-Bold.woff2') format('woff2'),
-        url('./fonts/Veles-Bold.woff') format('woff'),
-        url('./fonts/Veles-Bold.ttf') format('truetype');
+        url('../fonts/Veles-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Veles-Bold.woff2') format('woff2'),
+        url('../fonts/Veles-Bold.woff') format('woff'),
+        url('../fonts/Veles-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Veles';
-    src: url('./fonts/Veles-Regular.eot');
-    src: local('./fonts/Veles-Regular'),
-        url('./fonts/Veles-Regular.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/Veles-Regular.woff2') format('woff2'),
-        url('./fonts/Veles-Regular.woff') format('woff'),
-        url('./fonts/Veles-Regular.ttf') format('truetype');
+    src: url('../fonts/Veles-Regular.eot');
+    src: local('../fonts/Veles-Regular'),
+        url('../fonts/Veles-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Veles-Regular.woff2') format('woff2'),
+        url('../fonts/Veles-Regular.woff') format('woff'),
+        url('../fonts/Veles-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -529,6 +534,11 @@ input:focus:required:invalid {
     .burger {
         display: block;
         height: 80px;
+
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        transition: top 0.3s;
     }
 
     .burger-icons {
@@ -612,13 +622,21 @@ input:focus:required:invalid {
 @media only screen and (max-width: 700px) {
 
     /* SLIDER */
+
+    .enrolment {
+        height: 470px;
+    }
+
+    section ul li {
+        font-size: 1em;
+    }
 }
 
 @media only screen and (max-width: 600px) {
 
     main {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .about-us {
@@ -635,10 +653,25 @@ input:focus:required:invalid {
 
     .flip-card {
         min-height: 400px;
-        max-height: 400px;
+        max-height: 400px!important;
     }
 
     section ul li {
-        font-size: 0.9em;
+        font-size: 0.8em;
+    }
+
+    .stream-back li {
+        padding: 10px 0px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .enrolment {
+        height: 500px;
+    }
+
+    .info div {
+        font-size: 1em;
     }
 }

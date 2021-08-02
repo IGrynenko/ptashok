@@ -17,10 +17,24 @@ let tempImage;
 
         listenForm();
         generateSlider();
+        hideBurgerMenu();
       }
     
     })(window, document, undefined);
 
+function hideBurgerMenu() {
+
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = () => {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById('burger').style.top = "0";
+        } else {
+            document.getElementById('burger').style.top = "-80px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+}
 
 function moveTo(name) {
 
