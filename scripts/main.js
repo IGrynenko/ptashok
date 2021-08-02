@@ -40,9 +40,7 @@ function moveTo(name) {
 
     const element = document.getElementById(name);
     const top = element.offsetTop - topOffset;
-
-    if (top > 0)
-        window.scrollTo(0, top);
+    window.scrollTo(0, top > 0 ? top : 0);
 }
 
 function dial() {
