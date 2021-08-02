@@ -182,9 +182,7 @@ main {
     cursor: pointer;
 }
 
-.flip-card:hover .flip-card-inner, 
-.flip-card:active .flip-card-inner,
-.flip-card:focus .flip-card-inner {
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -603,6 +601,10 @@ input:focus:required:invalid {
     }
 
     .map {
+        width: 100%!important;
+    }
+
+    .info {
         width: 100%!important;
     }
 }
