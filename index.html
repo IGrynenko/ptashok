@@ -13,6 +13,7 @@
         <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="./splide.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="default">
                 <div class="logo">
                     <img src="./images/logo-ptashok.jpg" alt="">
                 </div>
@@ -37,6 +38,24 @@
                     <button class="call-btn" onclick="dial()">
                         <div>зателефонуйте<br>нам</div>
                     </button>
+                </div>
+            </nav>
+            <nav class="burger">
+                <div class="burger-icons">
+                    <div class="logo2">
+                        <img src="./images/logo-ptashok.jpg" alt="">
+                    </div>
+                    <div class="burger-logo" onclick="collapseMenu()">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                    </div>
+                </div>
+                <div class="burger-menu" id="burger-menu">
+                    <ul>
+                        <li><a onclick="moveTo('about-us');collapseMenu();">Про нас</a></li>
+                        <li><a onclick="moveTo('features');collapseMenu();">Особливості</a></li>
+                        <li><a onclick="moveTo('contacts');collapseMenu();">Контакти</a></li>
+                        <li><a onclick="moveTo('enrolment');collapseMenu();">Вступ</a></li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -216,7 +235,7 @@
                 </div>
                 <div class="form-info">
                     <p>Настискаючи на кнопку, ви даєте згоду на обробку персональних даних. Ми не передаємо ці дані третім сторонам.</p>
-                    <p>*Обов'вязкові для заповнення поля.</p>
+                    <p>*Обов'язкові для заповнення поля.</p>
                 </div>
             </section>
             <footer>

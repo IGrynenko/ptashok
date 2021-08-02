@@ -3,6 +3,8 @@ const phone = '+380965235134';
 const imageName = 'slide-image-';
 const regex = /slide\d+/i;
 
+let isBurgerShown = false;
+
 let tempImage;
 
 (function(window, document, undefined){
@@ -143,4 +145,21 @@ function closeModal() {
 
     if (tempImage)
         tempImage.remove();
+}
+
+function collapseMenu() {
+
+    const burgerMenuElement = document.getElementById('burger-menu');
+
+    if (burgerMenuElement) {
+        
+        if (isBurgerShown) {
+            burgerMenuElement.style.top = '-1000px';
+        }
+        else {
+            burgerMenuElement.style.top = '0px';
+        }
+
+        isBurgerShown = !isBurgerShown;
+    }
 }

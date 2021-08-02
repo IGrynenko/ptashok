@@ -57,11 +57,15 @@ body {
 }
 
 /* navigation */
-nav {
+nav.default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 100px;
+}
+
+.burger, .burger-menu {
+    display: none;
 }
 
 nav .logo {
@@ -444,6 +448,7 @@ input:focus:required:invalid {
     cursor: pointer;
 }
 
+
 /* modal */
 .modal {
     display: none;
@@ -485,4 +490,151 @@ input:focus:required:invalid {
     width: 100%;
     max-width: 1200px;
     padding: 0px 50px;
+}
+
+@media only screen and (max-width: 1150px) {
+
+    main {
+        padding: 150px 80px 0px 80px;
+    }
+
+    .cards-row {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .flip-card {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .features {
+        height: 1650px;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    main {
+        padding-top: 110px;
+    }
+
+    nav.default {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        height: 80px;
+    }
+
+    .burger-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger-logo {
+        height: 80px;
+        width: 80px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+
+    .burger-logo:hover,
+    .burger-menu li:hover {
+        cursor: pointer;
+    }
+
+    .burger-logo svg {
+        height: 50px;
+        width: 50px;
+        color: rgb(48, 107, 97);
+    }
+
+    nav .logo2 {
+        height: 80px;
+        z-index: 3;
+    }
+
+    nav .logo2 img {
+        height: 80px;
+        padding-left: 20px;
+    }
+
+    .burger-menu {
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        justify-content: center;
+        transition: all .5s ease-in-out;
+        transform-origin: left top;
+        display: flex;
+        top: -1000px;
+        position: relative;
+    }
+
+    .burger-menu ul {
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    .burger-menu li {
+        list-style-type: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .contacts {
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .map {
+        width: 100%!important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* SLIDER */
+}
+
+@media only screen and (max-width: 600px) {
+
+    main {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .about-us {
+        height: 550px;
+    }
+
+    .features {
+        height: 1700px;
+    }
+
+    .cards-row {
+        height: 850px;
+    }
+
+    .flip-card {
+        min-height: 400px;
+        max-height: 400px;
+    }
+
+    section ul li {
+        font-size: 0.9em;
+    }
 }
