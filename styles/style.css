@@ -134,7 +134,6 @@ nav .menu ul li {
 /* body */
 main {
     padding: 150px 120px 0px 120px;
-    max-width: 1400px;
 }
 
 .line {
@@ -225,7 +224,7 @@ main {
 }
 
 .kindergarten-front {
-    background: url('../images/kindergarten.jpg');
+    background: url('../images/features.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: local;
@@ -238,7 +237,7 @@ main {
 }
 
 .child-front {
-    background: url('../images/childcare-hero.jpg');
+    background: url('../images/child.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: local;
@@ -283,9 +282,12 @@ main {
 }
 
 .kindergarten-back li,
-.child-back li,
-.stream-back li {
+.child-back li {
     padding: 15px 0px;
+}
+
+.stream-back li {
+    padding: 7px 0px;
 }
 
 .infrastructure-back li {
@@ -661,7 +663,22 @@ footer {
     }
 
     .stream-back li {
-        padding: 10px 0px;
+        padding: 7px 0px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .child-back li {
+        padding: 8px 0px;
+    }
+
+    .stream-back li {
+        padding: 5px 0px;
+    }
+
+    .infrastructure-back li {
+        padding: 4px 0px;
     }
 }
 
