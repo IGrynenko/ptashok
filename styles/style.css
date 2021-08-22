@@ -392,6 +392,12 @@ address div {
     word-wrap: break-word;
 }
 
+.submit-btn button:disabled,
+.submit-btn button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 input:focus:required:invalid {
     border: 2px solid red;
 }
@@ -558,8 +564,7 @@ footer {
         z-index: 3;
     }
 
-    .burger-logo:hover,
-    .burger-menu li:hover {
+    .burger-logo:hover {
         cursor: pointer;
     }
 
@@ -619,11 +624,19 @@ footer {
     .info {
         width: 100%!important;
     }
+
+    .about-us {
+        height: 540px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
 
     /* SLIDER */
+
+    .about-us {
+        height: 620px;
+    }
 
     .enrolment {
         height: 470px;
@@ -642,7 +655,7 @@ footer {
     }
 
     .about-us {
-        height: 550px;
+        height: 600px;
     }
 
     .features {
@@ -682,7 +695,18 @@ footer {
     }
 }
 
+@media only screen and (max-width: 500px) {
+
+    .about-us {
+        height: 640px;
+    }
+}
+
 @media only screen and (max-width: 450px) {
+
+    .about-us {
+        height: 700px;
+    }
 
     .enrolment {
         height: 500px;
@@ -690,5 +714,59 @@ footer {
 
     .info div {
         font-size: 1em;
+    }
+
+    .gray-cover .title {
+        font-size: 1.6em;
+    }
+
+    li span.bullet {
+        font-size: 0.9rem;
+    }
+
+    .infrastructure-back li {
+        padding: 3px 0px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .about-us {
+        height: 650px;
+    }
+
+    li span.bullet {
+        font-size: 0.85rem;
+    }
+
+    div, p {
+        font-size: 0.9rem;
+    }
+
+    .enrolment {
+        height: 470px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    .about-us {
+        height: 700px;
+    }
+
+    .child-back li {
+        padding: 4px 0px;
+    }
+
+    .stream-back li {
+        padding: 3px 0px;
+    }
+
+    li span.bullet {
+        font-size: 0.8rem;
+    }
+
+    .enrolment {
+        height: 490px;
     }
 }

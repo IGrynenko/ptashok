@@ -116,7 +116,7 @@ function generateSlider() {
 
 function zoomPicture(e) {
 
-    const imageId = getImageId(e);
+    const imageId = e?.slide?.children[0]?.children[0]?.id;
     const modalElement = document.getElementById('modal');
 
     if (imageId && modalElement) {
