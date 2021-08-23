@@ -144,7 +144,7 @@ main {
 }
 
 .about-us {
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -628,6 +628,14 @@ footer {
 
     .about-us {
         height: 540px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    main {
+        max-width: 1400px;
+        margin: auto;
     }
 }
 
