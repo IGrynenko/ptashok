@@ -121,7 +121,8 @@ nav .menu ul li {
     word-wrap: break-word;
 }
 
-.call .call-btn:hover {
+.call .call-btn:hover,
+.submit-btn button:hover {
     background-color: #F5A797;
     opacity: 0.9;
 }
