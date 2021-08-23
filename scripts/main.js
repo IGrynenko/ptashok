@@ -1,11 +1,12 @@
+const constants  = import('./constants.js');
+
 const topOffset = 120;
-const phone = '+380965235134';
 const imageName = 'slide-image-';
 const regex = /slide\d+/i;
 
 let isBurgerShown = false;
-
 let tempImage;
+let phone, photos, noImage;
 
 (function(window, document, undefined){
     // code that should be taken care of right away
@@ -14,6 +15,12 @@ let tempImage;
     
       function init(){
         // the code to be called when the dom has loaded
+
+        constants.then(e => {
+            phone = e.phone,
+            photos = e.slider,
+            noImage = e.noImage
+        });
 
         listenForm();
         generateSlider();
@@ -121,30 +128,16 @@ function zoomPicture(e) {
 
     if (imageId && modalElement) {
 
-        const imageElement = document.getElementById(imageId);
+        // const imageElement = document.getElementById(imageId);
         modalElement.style.display = 'block';
         tempImage = document.createElement('img');
-        tempImage.src = imageElement.src;
+        let originalPhoto = photos.find(e => e.id === imageId);
+        tempImage.src = originalPhoto ? originalPhoto.path : noImage;
+        // tempImage.src = imageElement.src;
         const modalContentElement = document.getElementById('modal-content');
 
         if (modalContentElement)
             modalContentElement.appendChild(tempImage);
-    }
-}
-
-function getImageId(sliderElement) {
-
-    const id = sliderElement?.slide?.id;
-
-    if (id) {
-
-        const matches = id.match(regex);
-
-        if (matches && matches.length > 0) {
-
-            const parsedId =  Number.parseInt(matches[0].match(/\d+/));
-            return parsedId ? `${imageName + parsedId}` : null;
-        }
     }
 }
 
