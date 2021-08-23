@@ -128,12 +128,10 @@ function zoomPicture(e) {
 
     if (imageId && modalElement) {
 
-        // const imageElement = document.getElementById(imageId);
         modalElement.style.display = 'block';
         tempImage = document.createElement('img');
         let originalPhoto = photos.find(e => e.id === imageId);
         tempImage.src = originalPhoto ? originalPhoto.path : noImage;
-        // tempImage.src = imageElement.src;
         const modalContentElement = document.getElementById('modal-content');
 
         if (modalContentElement)
